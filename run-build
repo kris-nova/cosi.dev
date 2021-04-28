@@ -1,0 +1,9 @@
+#!/bin/bash
+
+siteName="kris-nova.github.io"
+
+echo "Generating ${siteName} from source..."
+
+cp -rvp ./src/public/* .
+
+echo "Complete"

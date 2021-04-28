@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Cleaning *~"
+rm -vrf *~
+rm -vrf .*~
+
+bakDir="/tmp/siteBak"
+mkdir -vp ${bakDir}
+echo "Moving to ${bakDir}"
+mv * ${bakDir}
+echo "Restoring..."
+mv -v ${bakDir}/src .
+mv -v ${bakDir}/run* .
+mv -v $bakDir/README* .
+
