@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="content-medium">
+    {{ range .Pages }}
+    <div class="content">
+        <h1 class="content-large"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+
+        <div class="content-paragraph">
+            {{ with .Summary }}
+            {{ . | markdownify }}
+            {{ else }}
+            {{ if .Truncated }}
+            {{ .Summary }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

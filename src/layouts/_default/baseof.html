@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ $.Site.Language }}">
 <head>
-	<meta name="generator" content="Hugo 0.82.0" />
-<link rel="stylesheet" href="https://kris-nova.githubpages.io/assets/doxi.css" />
+<link rel="stylesheet" href="{{ "assets/doxi.css" | absURL }}" />
 <title>
     The COSI Project
 </title>
@@ -21,11 +20,7 @@
         Welcome to The COSI Project
     </div>
 
-    
-
-
-
-
+    {{ block "main" . }} {{ end }}
 
 </div>
 

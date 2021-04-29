@@ -1,0 +1,91 @@
+/* ------------------------------------
+ * [The COSI Project]
+ *
+ * doxi.css
+ * author: kris nóva <kris@nivenly.com>
+ */
+
+/* ------------------------------------
+ * [fonts]
+ */
+@font-face {
+    font-family: Commodore64;
+    src: url('fonts/commodore64.ttf') format('truetype');
+}
+
+/* ------------------------------------
+* [colors]
+*/
+:root {
+    --bg: #1A1616;
+    --bg-lighter: #493f3f;
+    --bg-darker: #1A1616;
+    --color-teal: #96c3f1;
+    --color-pink: #6f88a2;
+    --color-green: #619d87;
+}
+
+/* ------------------------------------
+ * [content]
+ *
+ * anything in the "middle" or "center"
+ * section of the website.
+ */
+
+body{
+    background: var(--bg);
+}
+
+
+
+.container,
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    font-family: Commodore64;
+    color: var(--color-green);
+    flex-direction: column;
+    flex: 1 auto;
+    align-items: center;
+    margin: 50px 0;
+}
+
+@media (max-width:683px) {
+    .content {
+        margin-top: 0;
+    }
+    .flex-row {
+        flex-direction: column;
+    }
+}
+
+.content-large {
+    font-family: Commodore64;
+    font-size: 1.7rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content-paragraph {
+    font-family: Commodore64;
+    font-size: 1.0rem;
+}
+
+.content-medium {
+    font-family: Commodore64;
+    font-size: 1.25rem;
+}
+
+.glow {
+    text-shadow: #ffffff 0px 0px 8px;
+}
+
+
+
+a:link {
+    text-decoration-style: solid;
+    text-decoration: none;
+}
